@@ -18,6 +18,8 @@
 	CGCDPadDirection _currentDirection;
 	
 	UIImageView *_dPadImageView;
+	
+	bool isImageBased = true;
 }
 
 @end
@@ -171,8 +173,15 @@
 	if (direction != _currentDirection)
 	{
 		_currentDirection = direction;
-//		[self setNeedsDisplay];
-		[_dPadImageView setImage:[self imageForDirection:_currentDirection]];
+
+		if (isImageBased)
+		{
+			[_dPadImageView setImage:[self imageForDirection:_currentDirection]];
+		}
+		else
+		{
+			[self setNeedsDisplay];
+		}
 		
 		if ([self.delegate respondsToSelector:@selector(dPad:didPressDirection:)])
 		{
@@ -189,8 +198,15 @@
 	}
 	
 	_currentDirection = CGCDPadDirectionNone;
-//	[self setNeedsDisplay];
-	[_dPadImageView setImage:[self imageForDirection:_currentDirection]];
+
+	if (isImageBased)
+	{
+		[_dPadImageView setImage:[self imageForDirection:_currentDirection]];
+	}
+	else
+	{
+		[self setNeedsDisplay];
+	}
 	
 	if ([self.delegate respondsToSelector:@selector(dPadDidReleaseDirection:)])
 	{
@@ -206,8 +222,15 @@
 	}
 	
 	_currentDirection = CGCDPadDirectionNone;
-//	[self setNeedsDisplay];
-	[_dPadImageView setImage:[self imageForDirection:_currentDirection]];
+
+	if (isImageBased)
+	{
+		[_dPadImageView setImage:[self imageForDirection:_currentDirection]];
+	}
+	else
+	{
+		[self setNeedsDisplay];
+	}
 	
 	if ([self.delegate respondsToSelector:@selector(dPadDidReleaseDirection:)])
 	{
