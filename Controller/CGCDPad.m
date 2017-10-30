@@ -17,6 +17,7 @@
 	
 	CGCDPadDirection _currentDirection;
 	
+	UIImageView *_dPadImageView;
 }
 
 @end
@@ -45,12 +46,18 @@
 
 - (void)commonInit
 {
-	[self setBackgroundColor:[UIColor clearColor]];
-	[self setContentMode:UIViewContentModeRedraw];
+		_dPadImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"dPad-None"]];
+		[_dPadImageView setFrame:CGRectMake(0, 0, [self bounds].size.width, [self bounds].size.height)];
+		[self addSubview:_dPadImageView];
 	
-	// set these externally for resizing to work while editing.
-	self.maxSize = CGSizeMake(300, 300);
-	self.minSize = CGSizeMake(100, 100);
+	
+//	[self setBackgroundColor:[UIColor clearColor]];
+//	[self setContentMode:UIViewContentModeRedraw];
+//
+//	// set these externally for resizing to work while editing.
+//	self.maxSize = CGSizeMake(300, 300);
+//	self.minSize = CGSizeMake(100, 100);
+//
 	
 	_currentDirection = CGCDPadDirectionNone;
 }
@@ -84,6 +91,46 @@
 	return direction;
 }
 
+- (UIImage *)imageForDirection:(CGCDPadDirection)direction
+{
+	UIImage *image = nil;
+	
+	switch (direction) {
+		case CGCDPadDirectionNone:
+			image = [UIImage imageNamed:@"dPad-None"];
+			break;
+		case CGCDPadDirectionUp:
+			image = [UIImage imageNamed:@"dPad-Up"];
+			break;
+		case CGCDPadDirectionDown:
+			image = [UIImage imageNamed:@"dPad-Down"];
+			break;
+		case CGCDPadDirectionLeft:
+			image = [UIImage imageNamed:@"dPad-Left"];
+			break;
+		case CGCDPadDirectionRight:
+			image = [UIImage imageNamed:@"dPad-Right"];
+			break;
+		case CGCDPadDirectionUpLeft:
+			image = [UIImage imageNamed:@"dPad-UpLeft"];
+			break;
+		case CGCDPadDirectionUpRight:
+			image = [UIImage imageNamed:@"dPad-UpRight"];
+			break;
+		case CGCDPadDirectionDownLeft:
+			image = [UIImage imageNamed:@"dPad-DownLeft"];
+			break;
+		case CGCDPadDirectionDownRight:
+			image = [UIImage imageNamed:@"dPad-DownRight"];
+			break;
+		default:
+			image = [UIImage imageNamed:@"dPad-None"];
+			break;
+	}
+	
+	return image;
+}
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
 	if (_editing)
@@ -99,7 +146,8 @@
 	if (direction != _currentDirection)
 	{
 		_currentDirection = direction;
-		[self setNeedsDisplay];
+//		[self setNeedsDisplay];
+		[_dPadImageView setImage:[self imageForDirection:_currentDirection]];
 		
 		if ([self.delegate respondsToSelector:@selector(dPad:didPressDirection:)])
 		{
@@ -123,7 +171,8 @@
 	if (direction != _currentDirection)
 	{
 		_currentDirection = direction;
-		[self setNeedsDisplay];
+//		[self setNeedsDisplay];
+		[_dPadImageView setImage:[self imageForDirection:_currentDirection]];
 		
 		if ([self.delegate respondsToSelector:@selector(dPad:didPressDirection:)])
 		{
@@ -140,7 +189,8 @@
 	}
 	
 	_currentDirection = CGCDPadDirectionNone;
-	[self setNeedsDisplay];
+//	[self setNeedsDisplay];
+	[_dPadImageView setImage:[self imageForDirection:_currentDirection]];
 	
 	if ([self.delegate respondsToSelector:@selector(dPadDidReleaseDirection:)])
 	{
@@ -156,7 +206,8 @@
 	}
 	
 	_currentDirection = CGCDPadDirectionNone;
-	[self setNeedsDisplay];
+//	[self setNeedsDisplay];
+	[_dPadImageView setImage:[self imageForDirection:_currentDirection]];
 	
 	if ([self.delegate respondsToSelector:@selector(dPadDidReleaseDirection:)])
 	{

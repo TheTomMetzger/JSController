@@ -32,6 +32,24 @@
 		1A4FA0DB1706303500B9630A /* CGCButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4FA0DA1706303500B9630A /* CGCButton.m */; };
 		1AB6825A170DD4E500956173 /* CGCControlLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB68259170DD4E500956173 /* CGCControlLayout.m */; };
 		1AB6825D170DDD0D00956173 /* Gameboy-landscape.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AB6825C170DDD0D00956173 /* Gameboy-landscape.plist */; };
+		E2037B2B1FA7A5C000EE11E1 /* dPad-Up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2037B191FA7A5BF00EE11E1 /* dPad-Up@2x.png */; };
+		E2037B2C1FA7A5C000EE11E1 /* dPad-DownRight.png in Resources */ = {isa = PBXBuildFile; fileRef = E2037B1A1FA7A5BF00EE11E1 /* dPad-DownRight.png */; };
+		E2037B2D1FA7A5C000EE11E1 /* dPad-Right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2037B1B1FA7A5BF00EE11E1 /* dPad-Right@2x.png */; };
+		E2037B2E1FA7A5C000EE11E1 /* dPad-DownLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = E2037B1C1FA7A5C000EE11E1 /* dPad-DownLeft.png */; };
+		E2037B2F1FA7A5C000EE11E1 /* dPad-Up.png in Resources */ = {isa = PBXBuildFile; fileRef = E2037B1D1FA7A5C000EE11E1 /* dPad-Up.png */; };
+		E2037B301FA7A5C000EE11E1 /* dPad-UpLeft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2037B1E1FA7A5C000EE11E1 /* dPad-UpLeft@2x.png */; };
+		E2037B311FA7A5C000EE11E1 /* dPad-Right.png in Resources */ = {isa = PBXBuildFile; fileRef = E2037B1F1FA7A5C000EE11E1 /* dPad-Right.png */; };
+		E2037B321FA7A5C000EE11E1 /* dPad-UpRight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2037B201FA7A5C000EE11E1 /* dPad-UpRight@2x.png */; };
+		E2037B331FA7A5C000EE11E1 /* dPad-DownRight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2037B211FA7A5C000EE11E1 /* dPad-DownRight@2x.png */; };
+		E2037B341FA7A5C000EE11E1 /* dPad-DownLeft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2037B221FA7A5C000EE11E1 /* dPad-DownLeft@2x.png */; };
+		E2037B351FA7A5C000EE11E1 /* dPad-None.png in Resources */ = {isa = PBXBuildFile; fileRef = E2037B231FA7A5C000EE11E1 /* dPad-None.png */; };
+		E2037B361FA7A5C000EE11E1 /* dPad-Left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2037B241FA7A5C000EE11E1 /* dPad-Left@2x.png */; };
+		E2037B371FA7A5C000EE11E1 /* dPad-Down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2037B251FA7A5C000EE11E1 /* dPad-Down@2x.png */; };
+		E2037B381FA7A5C000EE11E1 /* dPad-None@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2037B261FA7A5C000EE11E1 /* dPad-None@2x.png */; };
+		E2037B391FA7A5C000EE11E1 /* dPad-UpRight.png in Resources */ = {isa = PBXBuildFile; fileRef = E2037B271FA7A5C000EE11E1 /* dPad-UpRight.png */; };
+		E2037B3A1FA7A5C000EE11E1 /* dPad-UpLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = E2037B281FA7A5C000EE11E1 /* dPad-UpLeft.png */; };
+		E2037B3B1FA7A5C000EE11E1 /* dPad-Down.png in Resources */ = {isa = PBXBuildFile; fileRef = E2037B291FA7A5C000EE11E1 /* dPad-Down.png */; };
+		E2037B3C1FA7A5C000EE11E1 /* dPad-Left.png in Resources */ = {isa = PBXBuildFile; fileRef = E2037B2A1FA7A5C000EE11E1 /* dPad-Left.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +89,24 @@
 		1AB68258170DD4E500956173 /* CGCControlLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGCControlLayout.h; sourceTree = "<group>"; };
 		1AB68259170DD4E500956173 /* CGCControlLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGCControlLayout.m; sourceTree = "<group>"; };
 		1AB6825C170DDD0D00956173 /* Gameboy-landscape.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Gameboy-landscape.plist"; sourceTree = "<group>"; };
+		E2037B191FA7A5BF00EE11E1 /* dPad-Up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-Up@2x.png"; sourceTree = "<group>"; };
+		E2037B1A1FA7A5BF00EE11E1 /* dPad-DownRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-DownRight.png"; sourceTree = "<group>"; };
+		E2037B1B1FA7A5BF00EE11E1 /* dPad-Right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-Right@2x.png"; sourceTree = "<group>"; };
+		E2037B1C1FA7A5C000EE11E1 /* dPad-DownLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-DownLeft.png"; sourceTree = "<group>"; };
+		E2037B1D1FA7A5C000EE11E1 /* dPad-Up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-Up.png"; sourceTree = "<group>"; };
+		E2037B1E1FA7A5C000EE11E1 /* dPad-UpLeft@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-UpLeft@2x.png"; sourceTree = "<group>"; };
+		E2037B1F1FA7A5C000EE11E1 /* dPad-Right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-Right.png"; sourceTree = "<group>"; };
+		E2037B201FA7A5C000EE11E1 /* dPad-UpRight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-UpRight@2x.png"; sourceTree = "<group>"; };
+		E2037B211FA7A5C000EE11E1 /* dPad-DownRight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-DownRight@2x.png"; sourceTree = "<group>"; };
+		E2037B221FA7A5C000EE11E1 /* dPad-DownLeft@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-DownLeft@2x.png"; sourceTree = "<group>"; };
+		E2037B231FA7A5C000EE11E1 /* dPad-None.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-None.png"; sourceTree = "<group>"; };
+		E2037B241FA7A5C000EE11E1 /* dPad-Left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-Left@2x.png"; sourceTree = "<group>"; };
+		E2037B251FA7A5C000EE11E1 /* dPad-Down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-Down@2x.png"; sourceTree = "<group>"; };
+		E2037B261FA7A5C000EE11E1 /* dPad-None@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-None@2x.png"; sourceTree = "<group>"; };
+		E2037B271FA7A5C000EE11E1 /* dPad-UpRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-UpRight.png"; sourceTree = "<group>"; };
+		E2037B281FA7A5C000EE11E1 /* dPad-UpLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-UpLeft.png"; sourceTree = "<group>"; };
+		E2037B291FA7A5C000EE11E1 /* dPad-Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-Down.png"; sourceTree = "<group>"; };
+		E2037B2A1FA7A5C000EE11E1 /* dPad-Left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-Left.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +193,24 @@
 		1A4FA0AB170623C700B9630A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E2037B291FA7A5C000EE11E1 /* dPad-Down.png */,
+				E2037B251FA7A5C000EE11E1 /* dPad-Down@2x.png */,
+				E2037B1C1FA7A5C000EE11E1 /* dPad-DownLeft.png */,
+				E2037B221FA7A5C000EE11E1 /* dPad-DownLeft@2x.png */,
+				E2037B1A1FA7A5BF00EE11E1 /* dPad-DownRight.png */,
+				E2037B211FA7A5C000EE11E1 /* dPad-DownRight@2x.png */,
+				E2037B2A1FA7A5C000EE11E1 /* dPad-Left.png */,
+				E2037B241FA7A5C000EE11E1 /* dPad-Left@2x.png */,
+				E2037B231FA7A5C000EE11E1 /* dPad-None.png */,
+				E2037B261FA7A5C000EE11E1 /* dPad-None@2x.png */,
+				E2037B1F1FA7A5C000EE11E1 /* dPad-Right.png */,
+				E2037B1B1FA7A5BF00EE11E1 /* dPad-Right@2x.png */,
+				E2037B1D1FA7A5C000EE11E1 /* dPad-Up.png */,
+				E2037B191FA7A5BF00EE11E1 /* dPad-Up@2x.png */,
+				E2037B281FA7A5C000EE11E1 /* dPad-UpLeft.png */,
+				E2037B1E1FA7A5C000EE11E1 /* dPad-UpLeft@2x.png */,
+				E2037B271FA7A5C000EE11E1 /* dPad-UpRight.png */,
+				E2037B201FA7A5C000EE11E1 /* dPad-UpRight@2x.png */,
 				1A162D3217075DF600889F2D /* button-pressed.png */,
 				1A162D3317075DF600889F2D /* button-pressed@2x.png */,
 				1A162D3417075DF600889F2D /* button.png */,
@@ -234,20 +288,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2037B2F1FA7A5C000EE11E1 /* dPad-Up.png in Resources */,
+				E2037B301FA7A5C000EE11E1 /* dPad-UpLeft@2x.png in Resources */,
 				1A1DA8731704A5BC00BDA8F9 /* InfoPlist.strings in Resources */,
+				E2037B2C1FA7A5C000EE11E1 /* dPad-DownRight.png in Resources */,
 				1A1DA87B1704A5BD00BDA8F9 /* Default.png in Resources */,
+				E2037B3B1FA7A5C000EE11E1 /* dPad-Down.png in Resources */,
 				1A1DA87D1704A5BD00BDA8F9 /* Default@2x.png in Resources */,
 				1A1DA87F1704A5BD00BDA8F9 /* Default-568h@2x.png in Resources */,
+				E2037B311FA7A5C000EE11E1 /* dPad-Right.png in Resources */,
 				1A1DA8851704A5BD00BDA8F9 /* CGCViewController.xib in Resources */,
 				1A162D3617075DF600889F2D /* button-pressed.png in Resources */,
+				E2037B341FA7A5C000EE11E1 /* dPad-DownLeft@2x.png in Resources */,
 				1A162D3717075DF600889F2D /* button-pressed@2x.png in Resources */,
 				1A162D3817075DF600889F2D /* button.png in Resources */,
 				1A162D3917075DF600889F2D /* button@2x.png in Resources */,
 				1AB6825D170DDD0D00956173 /* Gameboy-landscape.plist in Resources */,
+				E2037B381FA7A5C000EE11E1 /* dPad-None@2x.png in Resources */,
+				E2037B3C1FA7A5C000EE11E1 /* dPad-Left.png in Resources */,
 				1A3D348A178177FC00637371 /* analogue_bg.png in Resources */,
 				1A3D348B178177FC00637371 /* analogue_bg@2x.png in Resources */,
+				E2037B391FA7A5C000EE11E1 /* dPad-UpRight.png in Resources */,
+				E2037B2B1FA7A5C000EE11E1 /* dPad-Up@2x.png in Resources */,
+				E2037B3A1FA7A5C000EE11E1 /* dPad-UpLeft.png in Resources */,
+				E2037B2D1FA7A5C000EE11E1 /* dPad-Right@2x.png in Resources */,
+				E2037B371FA7A5C000EE11E1 /* dPad-Down@2x.png in Resources */,
 				1A3D348C178177FC00637371 /* analogue_handle.png in Resources */,
 				1A3D348D178177FC00637371 /* analogue_handle@2x.png in Resources */,
+				E2037B2E1FA7A5C000EE11E1 /* dPad-DownLeft.png in Resources */,
+				E2037B351FA7A5C000EE11E1 /* dPad-None.png in Resources */,
+				E2037B331FA7A5C000EE11E1 /* dPad-DownRight@2x.png in Resources */,
+				E2037B361FA7A5C000EE11E1 /* dPad-Left@2x.png in Resources */,
+				E2037B321FA7A5C000EE11E1 /* dPad-UpRight@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
