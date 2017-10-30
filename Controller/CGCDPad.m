@@ -1,27 +1,27 @@
 //
-//  JSDPad.m
+//  CGCDPad.m
 //  Controller
 //
 //  Created by James Addyman on 28/03/2013.
 //  Copyright (c) 2013 James Addyman. All rights reserved.
 //
 
-#import "JSDPad.h"
+#import "CGCDPad.h"
 #import <QuartzCore/QuartzCore.h>
 
 #define MAIN_FILL_COLOR ([UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:1.0])
 #define ARROW_FILL_COLOR ([UIColor colorWithRed:0.96 green:0.96 blue:0.96 alpha:1.0])
 #define STROKE_COLOR ([UIColor colorWithRed:0.59 green:0.59 blue:0.59 alpha:1.0])
 
-@interface JSDPad () {
+@interface CGCDPad () {
 	
-	JSDPadDirection _currentDirection;
+	CGCDPadDirection _currentDirection;
 	
 }
 
 @end
 
-@implementation JSDPad
+@implementation CGCDPad
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -52,7 +52,7 @@
 	self.maxSize = CGSizeMake(300, 300);
 	self.minSize = CGSizeMake(100, 100);
 	
-	_currentDirection = JSDPadDirectionNone;
+	_currentDirection = CGCDPadDirectionNone;
 }
 
 - (void)dealloc
@@ -60,12 +60,12 @@
 	self.delegate = nil;
 }
 
-- (JSDPadDirection)currentDirection
+- (CGCDPadDirection)currentDirection
 {
 	return _currentDirection;
 }
 
-- (JSDPadDirection)directionForPoint:(CGPoint)point
+- (CGCDPadDirection)directionForPoint:(CGPoint)point
 {
 	CGFloat x = point.x;
 	CGFloat y = point.y;
@@ -73,13 +73,13 @@
 	if (((x < 0) || (x > [self bounds].size.width)) ||
 		((y < 0) || (y > [self bounds].size.height)))
 	{
-		return JSDPadDirectionNone;
+		return CGCDPadDirectionNone;
 	}
 	
 	NSUInteger column = x / ([self bounds].size.width / 3);
 	NSUInteger row = y / ([self bounds].size.height / 3);
 
-	JSDPadDirection direction = (row * 3) + column + 1;
+	CGCDPadDirection direction = (row * 3) + column + 1;
 	
 	return direction;
 }
@@ -94,7 +94,7 @@
 	UITouch *touch = [touches anyObject];
 	CGPoint point = [touch locationInView:self];
 	
-	JSDPadDirection direction = [self directionForPoint:point];
+	CGCDPadDirection direction = [self directionForPoint:point];
 	
 	if (direction != _currentDirection)
 	{
@@ -118,7 +118,7 @@
 	UITouch *touch = [touches anyObject];
 	CGPoint point = [touch locationInView:self];
 	
-	JSDPadDirection direction = [self directionForPoint:point];
+	CGCDPadDirection direction = [self directionForPoint:point];
 	
 	if (direction != _currentDirection)
 	{
@@ -139,7 +139,7 @@
 		return;
 	}
 	
-	_currentDirection = JSDPadDirectionNone;
+	_currentDirection = CGCDPadDirectionNone;
 	[self setNeedsDisplay];
 	
 	if ([self.delegate respondsToSelector:@selector(dPadDidReleaseDirection:)])
@@ -155,7 +155,7 @@
 		return;
 	}
 	
-	_currentDirection = JSDPadDirectionNone;
+	_currentDirection = CGCDPadDirectionNone;
 	[self setNeedsDisplay];
 	
 	if ([self.delegate respondsToSelector:@selector(dPadDidReleaseDirection:)])
@@ -335,9 +335,9 @@
 	CGContextAddLineToPoint(ctx, halfWidth, arrowInset);
 	CGContextClosePath(ctx);
 	
-	if ([self currentDirection] == JSDPadDirectionUp ||
-		[self currentDirection] == JSDPadDirectionUpLeft ||
-		[self currentDirection] == JSDPadDirectionUpRight)
+	if ([self currentDirection] == CGCDPadDirectionUp ||
+		[self currentDirection] == CGCDPadDirectionUpLeft ||
+		[self currentDirection] == CGCDPadDirectionUpRight)
 	{
 		CGContextSetShadowWithColor(ctx, CGSizeZero, (rect.size.width / 100) * 4, [[UIColor whiteColor] CGColor]);
 		CGContextSetFillColorWithColor(ctx, [[UIColor whiteColor] CGColor]);
@@ -366,9 +366,9 @@
 	CGContextAddLineToPoint(ctx, rect.size.width - arrowInset, halfHeight);
 	CGContextClosePath(ctx);
 	
-	if ([self currentDirection] == JSDPadDirectionUpRight ||
-		[self currentDirection] == JSDPadDirectionDownRight ||
-		[self currentDirection] == JSDPadDirectionRight)
+	if ([self currentDirection] == CGCDPadDirectionUpRight ||
+		[self currentDirection] == CGCDPadDirectionDownRight ||
+		[self currentDirection] == CGCDPadDirectionRight)
 	{
 		CGContextSetShadowWithColor(ctx, CGSizeZero, (rect.size.width / 100) * 4, [[UIColor whiteColor] CGColor]);
 		CGContextSetFillColorWithColor(ctx, [[UIColor whiteColor] CGColor]);
@@ -397,9 +397,9 @@
 	CGContextAddLineToPoint(ctx, halfWidth, rect.size.height - arrowInset);
 	CGContextClosePath(ctx);
 	
-	if ([self currentDirection] == JSDPadDirectionDown ||
-		[self currentDirection] == JSDPadDirectionDownLeft ||
-		[self currentDirection] == JSDPadDirectionDownRight)
+	if ([self currentDirection] == CGCDPadDirectionDown ||
+		[self currentDirection] == CGCDPadDirectionDownLeft ||
+		[self currentDirection] == CGCDPadDirectionDownRight)
 	{
 		CGContextSetShadowWithColor(ctx, CGSizeZero, (rect.size.width / 100) * 4, [[UIColor whiteColor] CGColor]);
 		CGContextSetFillColorWithColor(ctx, [[UIColor whiteColor] CGColor]);
@@ -428,9 +428,9 @@
 	CGContextAddLineToPoint(ctx, arrowInset, halfHeight);
 	CGContextClosePath(ctx);
 	
-	if ([self currentDirection] == JSDPadDirectionLeft ||
-		[self currentDirection] == JSDPadDirectionUpLeft ||
-		[self currentDirection] == JSDPadDirectionDownLeft)
+	if ([self currentDirection] == CGCDPadDirectionLeft ||
+		[self currentDirection] == CGCDPadDirectionUpLeft ||
+		[self currentDirection] == CGCDPadDirectionDownLeft)
 	{
 		CGContextSetShadowWithColor(ctx, CGSizeZero, (rect.size.width / 100) * 4, [[UIColor whiteColor] CGColor]);
 		CGContextSetFillColorWithColor(ctx, [[UIColor whiteColor] CGColor]);

@@ -1,5 +1,5 @@
 //
-//  JSAppDelegate.h
+//  CGCAppDelegate.h
 //  Controller
 //
 //  Created by James Addyman on 28/03/2013.
@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@class JSMenuViewController;
+@class CGCMenuViewController;
 
-@interface JSAppDelegate : UIResponder <UIApplicationDelegate>
+@interface CGCAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) UINavigationController *navController;

@@ -1,4 +1,4 @@
-JSController
+CGCController
 ============
 
 A set of classes that make it easy to build a controller UI for games.
@@ -9,9 +9,9 @@ A set of classes that make it easy to build a controller UI for games.
 - Push Button class with configurable background images
 - Analogue stick class that uses a normalized -1.0 to 1.0 scale and supports inverted Y axis. Background and handle images can be swapped out.
 - Can be used within Interface Builder
-	- Just drag a UIView onto your XIB and set it's class as JSDPad, JSButton or JSAnalogueStick. You can set it's delegate from within interface builder as well as its position and size.
+	- Just drag a UIView onto your XIB and set it's class as CGCDPad, CGCButton or CGCAnalogueStick. You can set it's delegate from within interface builder as well as its position and size.
 
-This project uses ARC. If your project does not use ARC, you will need to add the compiler flag `-fobjc-arc` to each of the JSController classes used in your project. This can be done in the Compile Sources build phase in the project settings.
+This project uses ARC. If your project does not use ARC, you will need to add the compiler flag `-fobjc-arc` to each of the CGCController classes used in your project. This can be done in the Compile Sources build phase in the project settings.
 
 (In progress)
 -------------
@@ -21,7 +21,7 @@ This project uses ARC. If your project does not use ARC, you will need to add th
 - Preset control layouts
 	- Plist files that describe a layout from which buttons, where they are, what they look like
 
-![JSTokenField](http://d.pr/i/k0wm+ "JSController")
+![CGCTokenField](http://d.pr/i/k0wm+ "CGCController")
 
 License (Simplified BSD)
 =======

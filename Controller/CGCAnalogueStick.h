@@ -1,5 +1,5 @@
 //
-//  JSAnalogueStick.h
+//  CGCAnalogueStick.h
 //  Controller
 //
 //  Created by James Addyman on 29/03/2013.
@@ -8,22 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
-@class  JSAnalogueStick;
+@class  CGCAnalogueStick;
 
-@protocol JSAnalogueStickDelegate <NSObject>
+@protocol CGCAnalogueStickDelegate <NSObject>
 
 @optional
-- (void)analogueStickDidChangeValue:(JSAnalogueStick *)analogueStick;
+- (void)analogueStickDidChangeValue:(CGCAnalogueStick *)analogueStick;
 
 @end
 
-@interface JSAnalogueStick : UIView
+@interface CGCAnalogueStick : UIView
 
 @property (nonatomic, readonly) CGFloat xValue;
 @property (nonatomic, readonly) CGFloat yValue;
 @property (nonatomic, assign) BOOL invertedYAxis;
 
-@property (nonatomic, assign) IBOutlet id <JSAnalogueStickDelegate> delegate;
+@property (nonatomic, assign) IBOutlet id <CGCAnalogueStickDelegate> delegate;
 
 @property (nonatomic, readonly) UIImageView *backgroundImageView;
 @property (nonatomic, readonly) UIImageView *handleImageView;

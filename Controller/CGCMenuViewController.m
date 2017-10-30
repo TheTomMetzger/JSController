@@ -1,21 +1,21 @@
 //
-//  JSMenuViewController.m
-//  JSController
+//  CGCMenuViewController.m
+//  CGCController
 //
 //  Created by James Addyman on 26/07/2013.
 //  Copyright (c) 2013 James Addyman. All rights reserved.
 //
 
-#import "JSMenuViewController.h"
-#import "JSViewController.h"
+#import "CGCMenuViewController.h"
+#import "CGCViewController.h"
 
 static NSString *CellIdentifier = @"Cell";
 
-@interface JSMenuViewController ()
+@interface CGCMenuViewController ()
 
 @end
 
-@implementation JSMenuViewController
+@implementation CGCMenuViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -72,13 +72,13 @@ static NSString *CellIdentifier = @"Cell";
 {
 	if (indexPath.row == 0)
 	{
-		JSViewController *viewController = [[JSViewController alloc] initWithNibName:@"JSViewController" bundle:nil];
+		CGCViewController *viewController = [[CGCViewController alloc] initWithNibName:@"CGCViewController" bundle:nil];
 		[viewController setShowDPad:YES];
 		[self.navigationController pushViewController:viewController animated:YES];
 	}
 	else
 	{
-		JSViewController *viewController = [[JSViewController alloc] initWithNibName:@"JSViewController" bundle:nil];
+		CGCViewController *viewController = [[CGCViewController alloc] initWithNibName:@"CGCViewController" bundle:nil];
 		[viewController setShowAnalogue:YES];
 		[self.navigationController pushViewController:viewController animated:YES];
 	}
