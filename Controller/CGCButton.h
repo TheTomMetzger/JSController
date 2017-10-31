@@ -1,5 +1,5 @@
 //
-//  JSButton.h
+//  CGCButton.h
 //  Controller
 //
 //  Created by James Addyman on 29/03/2013.
@@ -8,16 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@class JSButton;
+@class CGCButton;
 
-@protocol JSButtonDelegate <NSObject>
+@protocol CGCButtonDelegate <NSObject>
 
-- (void)buttonPressed:(JSButton *)button;
-- (void)buttonReleased:(JSButton *)button;
+- (void)buttonPressed:(CGCButton *)button;
+- (void)buttonReleased:(CGCButton *)button;
 
 @end
 
-@interface JSButton : UIView
+@interface CGCButton : UIView
 
 @property (nonatomic, readonly) UILabel *titleLabel;
 @property (nonatomic, strong) UIImage *backgroundImage;
@@ -25,6 +25,6 @@
 @property (nonatomic, assign) UIEdgeInsets titleEdgeInsets;
 @property (nonatomic, assign) BOOL pressed;
 
-@property (nonatomic, weak) IBOutlet id <JSButtonDelegate> delegate;
+@property (nonatomic, weak) IBOutlet id <CGCButtonDelegate> delegate;
 
 @end

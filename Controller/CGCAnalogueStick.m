@@ -1,16 +1,16 @@
 //
-//  JSAnalogueStick.m
+//  CGCAnalogueStick.m
 //  Controller
 //
 //  Created by James Addyman on 29/03/2013.
 //  Copyright (c) 2013 James Addyman. All rights reserved.
 //
 
-#import "JSAnalogueStick.h"
+#import "CGCAnalogueStick.h"
 
 #define RADIUS ([self bounds].size.width / 2)
 
-@implementation JSAnalogueStick
+@implementation CGCAnalogueStick
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -34,6 +34,8 @@
 
 - (void)commonInit
 {
+	[self setBackgroundColor:[UIColor clearColor]];
+	
 	_backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"analogue_bg"]];
 	CGRect backgroundImageFrame = [_backgroundImageView frame];
 	backgroundImageFrame.size = [self bounds].size;

@@ -1,14 +1,14 @@
 //
-//  JSButton.m
+//  CGCButton.m
 //  Controller
 //
 //  Created by James Addyman on 29/03/2013.
 //  Copyright (c) 2013 James Addyman. All rights reserved.
 //
 
-#import "JSButton.h"
+#import "CGCButton.h"
 
-@interface JSButton () {
+@interface CGCButton () {
 	
 	UIImageView *_backgroundImageView;
 	
@@ -16,7 +16,7 @@
 
 @end
 
-@implementation JSButton
+@implementation CGCButton
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -40,6 +40,8 @@
 
 - (void)commonInit
 {
+	[self setBackgroundColor:[UIColor clearColor]];
+	
 	_backgroundImageView = [[UIImageView alloc] initWithImage:self.backgroundImage];
 	[_backgroundImageView setFrame:[self bounds]];
 	[_backgroundImageView setContentMode:UIViewContentModeCenter];

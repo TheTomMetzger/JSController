@@ -1,31 +1,31 @@
 //
-//  JSControlLayout.m
+//  CGCControlLayout.m
 //  Controller
 //
 //  Created by James Addyman on 04/04/2013.
 //  Copyright (c) 2013 James Addyman. All rights reserved.
 //
 
-#import "JSControlLayout.h"
+#import "CGCControlLayout.h"
 
-@interface JSControlLayout () {
+@interface CGCControlLayout () {
 
-	JSDPad *_dPad;
+	CGCDPad *_dPad;
 	NSMutableArray *_buttons;
 	
 }
 
 @end
 
-@implementation JSControlLayout
+@implementation CGCControlLayout
 
-- (id)initWithLayout:(NSString *)layoutFile delegate:(id <JSDPadDelegate, JSButtonDelegate>)delegate
+- (id)initWithLayout:(NSString *)layoutFile delegate:(id <CGCDPadDelegate, CGCButtonDelegate>)delegate
 {
 	if ((self = [super initWithFrame:CGRectZero]))
 	{
 		if (![layoutFile length] || !delegate)
 		{
-			@throw [NSException exceptionWithName:@"JSControlPadInternalInconsistencyException"
+			@throw [NSException exceptionWithName:@"CGCControlPadInternalInconsistencyException"
 										   reason:@"A Layout file path AND a delegate must be provided"
 										 userInfo:nil];
 			return nil;
@@ -43,7 +43,7 @@
 				// set up the dpad
 				NSDictionary *dPadDict = [layout objectForKey:@"dpad"];
 				CGRect dPadFrame = CGRectFromString([dPadDict objectForKey:@"frame"]);
-				_dPad = [[JSDPad alloc] initWithFrame:dPadFrame];
+				_dPad = [[CGCDPad alloc] initWithFrame:dPadFrame];
 				[_dPad setDelegate:self.delegate];
 				[self addSubview:_dPad];
 				
@@ -53,7 +53,7 @@
 				for (NSDictionary *buttonDict in buttonArray)
 				{
 					CGRect buttonFrame = CGRectFromString([buttonDict objectForKey:@"frame"]);
-					JSButton *button = [[JSButton alloc] initWithFrame:buttonFrame];
+					CGCButton *button = [[CGCButton alloc] initWithFrame:buttonFrame];
 					[[button titleLabel] setText:[buttonDict objectForKey:@"title"]];
 					[button setDelegate:self.delegate];
 					[self addSubview:button];
@@ -78,7 +78,7 @@
 	}
 	else
 	{
-		for (JSButton *button in _buttons)
+		for (CGCButton *button in _buttons)
 		{
 			frame = [button frame];
 			

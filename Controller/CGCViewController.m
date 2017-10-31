@@ -1,25 +1,25 @@
 //
-//  JSViewController.m
+//  CGCViewController.m
 //  Controller
 //
 //  Created by James Addyman on 28/03/2013.
 //  Copyright (c) 2013 James Addyman. All rights reserved.
 //
 
-#import "JSViewController.h"
-#import "JSDPad.h"
+#import "CGCViewController.h"
+#import "CGCDPad.h"
 
-@interface JSViewController () {
+@interface CGCViewController () {
 	
 	NSMutableArray *_pressedButtons;
 	
 }
 
-- (NSString *)stringForDirection:(JSDPadDirection)direction;
+- (NSString *)stringForDirection:(CGCDPadDirection)direction;
 
 @end
 
-@implementation JSViewController
+@implementation CGCViewController
 
 - (void)viewDidLoad
 {
@@ -39,6 +39,29 @@
 	[self updateDirectionLabel];
 	[self updateButtonLabel];
 	[self updateAnalogueLabel];
+	
+	if (self.showDPad)
+	{
+		[self.directionlabel setHidden:NO];
+		[self.dPad setHidden:NO];
+		
+		[self.analogueLabel setHidden:YES];
+		[self.analogueStick setHidden:YES];
+	}
+	
+	if (self.showAnalogue)
+	{
+		[self.directionlabel setHidden:YES];
+		[self.dPad setHidden:YES];
+		
+		[self.analogueLabel setHidden:NO];
+		[self.analogueStick setHidden:NO];
+	}
+	
+	UIBarButtonItem *editButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
+																					target:self
+																					action:@selector(toggleEditing:)];
+	[self.navigationItem setRightBarButtonItem:editButtonItem];
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,36 +69,55 @@
     [super didReceiveMemoryWarning];
 }
 
-- (NSString *)stringForDirection:(JSDPadDirection)direction
+- (void)toggleEditing:(id)sender
+{
+	[self.dPad setEditing:![self.dPad isEditing]];
+	if ([self.dPad isEditing])
+	{
+		UIBarButtonItem *doneButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+																						target:self
+																						action:@selector(toggleEditing:)];
+		[self.navigationItem setRightBarButtonItem:doneButtonItem];
+	}
+	else
+	{
+		UIBarButtonItem *editButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
+																						target:self
+																						action:@selector(toggleEditing:)];
+		[self.navigationItem setRightBarButtonItem:editButtonItem];
+	}
+}
+
+- (NSString *)stringForDirection:(CGCDPadDirection)direction
 {
 	NSString *string = nil;
 	
 	switch (direction) {
-		case JSDPadDirectionNone:
+		case CGCDPadDirectionNone:
 			string = @"None";
 			break;
-		case JSDPadDirectionUp:
+		case CGCDPadDirectionUp:
 			string = @"Up";
 			break;
-		case JSDPadDirectionDown:
+		case CGCDPadDirectionDown:
 			string = @"Down";
 			break;
-		case JSDPadDirectionLeft:
+		case CGCDPadDirectionLeft:
 			string = @"Left";
 			break;
-		case JSDPadDirectionRight:
+		case CGCDPadDirectionRight:
 			string = @"Right";
 			break;
-		case JSDPadDirectionUpLeft:
+		case CGCDPadDirectionUpLeft:
 			string = @"Up Left";
 			break;
-		case JSDPadDirectionUpRight:
+		case CGCDPadDirectionUpRight:
 			string = @"Up Right";
 			break;
-		case JSDPadDirectionDownLeft:
+		case CGCDPadDirectionDownLeft:
 			string = @"Down Left";
 			break;
-		case JSDPadDirectionDownRight:
+		case CGCDPadDirectionDownRight:
 			string = @"Down Right";
 			break;
 		default:
@@ -95,7 +137,7 @@
 {
 	NSString *buttonString = @"";
 	
-	for(JSButton *button in _pressedButtons)
+	for(CGCButton *button in _pressedButtons)
 	{
 		if ([buttonString length])
 		{
@@ -120,23 +162,23 @@
 	[self.analogueLabel setText:[NSString stringWithFormat:@"Analogue: %.1f , %.1f", self.analogueStick.xValue, self.analogueStick.yValue]];
 }
 
-#pragma mark - JSDPadDelegate
+#pragma mark - CGCDPadDelegate
 
-- (void)dPad:(JSDPad *)dPad didPressDirection:(JSDPadDirection)direction
+- (void)dPad:(CGCDPad *)dPad didPressDirection:(CGCDPadDirection)direction
 {
 	NSLog(@"Changing direction to: %@", [self stringForDirection:direction]);
 	[self updateDirectionLabel];
 }
 
-- (void)dPadDidReleaseDirection:(JSDPad *)dPad
+- (void)dPadDidReleaseDirection:(CGCDPad *)dPad
 {
 	NSLog(@"Releasing DPad");
 	[self updateDirectionLabel];
 }
 
-#pragma mark - JSButtonDelegate
+#pragma mark - CGCButtonDelegate
 
-- (void)buttonPressed:(JSButton *)button
+- (void)buttonPressed:(CGCButton *)button
 {
 	if ([_pressedButtons containsObject:button])
 	{
@@ -156,7 +198,7 @@
 	[self updateButtonLabel];
 }
 
-- (void)buttonReleased:(JSButton *)button
+- (void)buttonReleased:(CGCButton *)button
 {
 	if ([_pressedButtons containsObject:button] == NO)
 	{
@@ -177,9 +219,9 @@
 	
 }
 
-#pragma mark - JSAnalogueStickDelegate
+#pragma mark - CGCAnalogueStickDelegate
 
-- (void)analogueStickDidChangeValue:(JSAnalogueStick *)analogueStick
+- (void)analogueStickDidChangeValue:(CGCAnalogueStick *)analogueStick
 {
 	[self updateAnalogueLabel];
 }
