@@ -42,6 +42,7 @@
 	
 	if (self.showDPad)
 	{
+		self.dPad.isImageBased = true;
 		[self.directionlabel setHidden:NO];
 		[self.dPad setHidden:NO];
 		

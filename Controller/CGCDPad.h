@@ -35,6 +35,7 @@ typedef NS_ENUM(NSUInteger, CGCDPadDirection)
 @property (nonatomic, weak) IBOutlet id <CGCDPadDelegate> delegate;
 
 @property (nonatomic, assign, getter = isEditing) BOOL editing;
+@property bool isImageBased;
 @property (nonatomic, assign) CGSize maxSize;
 @property (nonatomic, assign) CGSize minSize;
 
