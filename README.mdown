@@ -9,7 +9,7 @@ A set of classes that make it easy to build a controller UI for games.
 - Push Button class with configurable background images
 - Analogue stick class that uses a normalized -1.0 to 1.0 scale and supports inverted Y axis. Background and handle images can be swapped out.
 - Can be used within Interface Builder
-	- Just drag a UIView onto your XIB and set it's class as CGCDPad, CGCButton or CGCAnalogueStick. You can set it's delegate from within interface builder as well as its position and size.
+	- Just drag a UIView onto your XIB and set it's class as `CGCDPad`, `CGCButton` or `CGCAnalogueStick`. You can set it's delegate from within interface builder as well as its position and size.
 
 This project uses ARC. If your project does not use ARC, you will need to add the compiler flag `-fobjc-arc` to each of the CGCController classes used in your project. This can be done in the Compile Sources build phase in the project settings.
 
@@ -40,7 +40,7 @@ permitted provided that the following conditions are met:
 		of conditions and the following disclaimer in the documentation and/or other materials
 		provided with the distribution.
 
-THIS SOFTWARE IS PROVIDED BY TOM METZGER ``AS IS'' AND ANY EXPRESS OR IMPLIED
+THIS SOFTWARE IS PROVIDED BY TOM METZGER "AS IS" AND ANY EXPRESS OR IMPLIED
 WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
 FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL JAMES ADDYMAN (JAMSOFT) OR
 CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
